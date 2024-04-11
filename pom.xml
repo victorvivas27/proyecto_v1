@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.2.4</version>
+        <version>3.2.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.proyecto_v1</groupId>
@@ -70,7 +70,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
-            <version>3.1.5</version>
+
         </dependency>
         <!-- https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt-api -->
         <dependency>
@@ -91,6 +91,24 @@
             <artifactId>jjwt-jackson</artifactId>
             <version>0.11.2</version>
             <scope>runtime</scope>
+        </dependency>
+        <!-- Dependencia para integrar Swagger UI con Spring Boot para la documentación de API -->
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-ui</artifactId>
+            <version>1.7.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.10.1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.modelmapper/modelmapper -->
+        <dependency>
+            <groupId>org.modelmapper</groupId>
+            <artifactId>modelmapper</artifactId>
+            <version>3.1.1</version>
         </dependency>
 
 

@@ -2,6 +2,7 @@ package com.proyecto_v1.proyecto_v1.exception;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.AccessDeniedException;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -53,6 +54,14 @@ public class GlobalExceptionHandler {
     public Map<String, String> handleGenericException(Exception exception) {
         Map<String, String> exceptionMessage = new HashMap<>();
         exceptionMessage.put("message", "Error interno del servidor: " + exception.getMessage());
+        return exceptionMessage;
+    }
+
+    @ExceptionHandler(AccessDeniedException.class)
+    @ResponseStatus(HttpStatus.FORBIDDEN)
+    public Map<String, String> handleAccessDeniedException(AccessDeniedException exception) {
+        Map<String, String> exceptionMessage = new HashMap<>();
+        exceptionMessage.put("message", "Acceso denegado: " + exception.getMessage());
         return exceptionMessage;
     }
 }
